@@ -40,7 +40,11 @@ def member():
   
   mycursor.execute(showMsgSql)
   msgs = mycursor.fetchall()
-  return render_template("member.html", user=name, msgs=msgs)
+  time = []
+  for i in msgs:
+    s = str(i[2]).split(" ")[1][:5]
+    time.append(s)
+  return render_template("member.html", user=name, msgs=msgs, time=time, len=len(time) )
 
 
 # 錯誤頁

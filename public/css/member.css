@@ -64,4 +64,8 @@ section .msgBoard .msg .userTime {
   font-weight: 400;
   position: relative;
   top: 2px;
+}
+
+footer {
+  height: 50px;
 }/*# sourceMappingURL=member.css.map */

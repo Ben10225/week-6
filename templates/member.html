@@ -42,18 +42,19 @@
         </div>
         <hr>
         <div class="msgBoard">
-          {% for i in msgs %}
+          {% for i in range(0, len)%}
           <div class="row d-flex justify-content-center mt-1">
             <div class="col-6 text-start msg">
-              <h4 class="userName">{{ i[0] }}</h4>
-              <h4 class="userMsg">:&emsp;{{ i[1] }}</h4>
-              <h4 class="userTime">{{ i[2] }}</h4>
+              <h4 class="userName">{{ msgs[i][0] }}</h4>
+              <h4 class="userMsg">:&emsp;{{ msgs[i][1] }}</h4>
+              <h4 class="userTime">{{ time[i] }}</h4>
             </div>
           </div>
           {% endfor %}
         </div>
       </div>
     </section>
+    <footer></footer>
   </div>
 
   <script src="/js/member.js"></script>
